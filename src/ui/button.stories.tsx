@@ -1,20 +1,23 @@
+import { Story } from "@storybook/react";
 import { Button } from "./button";
 
 export default {
-  title: "Hello",
-  component: Button,
-  argTypes: {
-    "data-theme": {
-      control: {
-        type: "select",
-        options: ["light", "dark"],
-      },
-    },
-  },
+	title: "Hello",
+	component: Button,
+	argTypes: {
+		"data-theme": {
+			control: {
+				type: "select",
+				options: ["light", "dark"],
+			},
+		},
+	},
 };
 
-export const World = (args: any) => (
-  <Button className="btn" {...args}>
-    Hey!
-  </Button>
+
+
+export const World<Story<ButtonProps>> = (args) => (
+	<Button className="btn" {...args}>
+		Hey!
+	</Button>
 );
