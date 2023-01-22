@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
 	return (
-		<html>
+		<html data-theme="light">
 			<head>
 				<title>next-daisy-experiment</title>
 			</head>
