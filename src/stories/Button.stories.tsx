@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { Button, ButtonProps } from "@/ui/Button";
-import { BRAND_COLOR, SIZE } from "@/ui/helpers";
+import { BRAND_COLOR, SHAPE, SIZE } from "@/ui/helpers";
 
 // More on how to set up stories at: https://storybook.js.org/docs/7.0/react/writing-stories/introduction
 const meta: Meta<ButtonProps> = {
@@ -16,6 +16,12 @@ const meta: Meta<ButtonProps> = {
 		},
 		size: {
 			options: [...Object.keys(SIZE), undefined],
+			control: {
+				type: "select",
+			},
+		},
+		shape: {
+			options: [...Object.keys(SHAPE), undefined],
 			control: {
 				type: "select",
 			},
